@@ -1,0 +1,15 @@
+[Unit]
+Description=xinger_api
+
+[Service]
+WorkingDirectory=/opt/mcim
+ExecStart=sh /opt/mcim/start.sh
+Restart=on-abnormal
+RestartSec=5s
+KillMode=mixed
+
+StandardOutput=null
+StandardError=syslog
+
+[Install]
+WantedBy=multi-user.target
