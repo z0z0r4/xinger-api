@@ -77,10 +77,6 @@ async def image(type: str = None):
 # async def image_hash(hash: str):
 #     return FileResponse(path=os.path.join(conf["img_cache_folder"], f'{hash}.png'), media_type="image/png")
 
-# @app.get("/.well-known/pki-validation/8CDABF772A69A852BE78648E7844A18D.txt")
-# async def _dns():
-#     return FileResponse(path="8CDABF772A69A852BE78648E7844A18D.txt")
-
 if __name__ == "__main__":
     if not os.path.exists(conf["img_cache_folder"]):
         os.makedirs(conf["img_cache_folder"])
