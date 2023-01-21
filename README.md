@@ -1,6 +1,6 @@
 # xinger-api
 
-这里实际上包含了我很多个想法...包括GitHub repo、seewo、local、CDN做图源...
+这里实际上包含了我很多个想法...包括GitHub repo、seewo（推荐，腾讯云和七牛）、local、班级小管家（推荐，阿里云OSS）、CDN做图源...
 
 最终选择seewo，其他脚本基本上是废稿，如果有别的想法欢迎提 issue
 
