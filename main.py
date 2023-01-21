@@ -8,8 +8,20 @@ from fastapi.responses import RedirectResponse
 
 
 app = FastAPI()
-with open("config.json") as config:
-    conf = json.load(config)
+
+if os.path.exists("config.json"):
+    with open("config.json") as config:
+        conf = json.load(config)
+else:
+    with open("config.json", "w") as config:
+        conf = {
+            "api_host": "127.0.0.1",
+            "api_port": 8000,
+            "img_cache_folder": "cache"
+        }
+        json.dump(conf, config)
+    print("请修改配置文件")
+    quit()
 
 def get_image_list_from_github_repo(owner: str ,repo: str, path: str):
     repo_dirs_resp = requests.get(f'https://api.github.com/repos/{owner}/{repo}/contents/')
