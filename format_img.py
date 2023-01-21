@@ -66,7 +66,7 @@ def format_file(path):
 def walk(path):
     for root, dirs, files in os.walk(path):            
         for file in files:
-            if os.path.splitext(file)[1] in (".jpg", ".jpge", ".png"):
+            if os.path.splitext(file)[1] in (".jpg", ".jpeg", ".png"):
                 format_file(os.path.join(root, file))
         for dir in dirs:
             walk(os.path.join(root, dir))
